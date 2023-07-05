@@ -1,0 +1,33 @@
+Config                    = {}
+Config.Locale             = 'en' --use (fr-en-br-de-es-sv)
+Config.EnableDiscordLink  = true -- only turn this on if you want link the log to a discord
+Config.green              = 56108
+Config.grey               = 8421504
+Config.red                = 16711680
+Config.orange             = 16744192
+Config.blue               = 2061822
+Config.purple             = 11750815
+Config.webhookadmin       = "https://discord.com/api/webhooks/849373215318081586/b0zCcdEm_We6ulG21qw1NELCu2F_rk4uGRKwS7nTl-6crcVBQZXPbcx6i-vs01ysPtfo"
+Config.webhookshoot       = "https://discord.com/api/webhooks/844037000205959178/bU73EhjLT33AqKabeQpB9fWB5TNrZIffynEBvJQAzNWsE1z7UqX986d_H35n-vKWExiX"
+Config.webhookitem        = "https://discord.com/api/webhooks/845997339206615091/OIigPmqFtA1rBo1K5xzt9jmUweid2x1x-zqHe9rEkItjSm0KpbAd7j-VeAG71YcxITbu"
+Config.webhookmoney       = "https://discord.com/api/webhooks/845996777840967700/K-1UEgT3lvHD0ZGkrhzRZRKgJa6he1eXdjhJmYgNYahbo9idoJD_gmq5F76VTpoC-vgA"
+Config.webhookambulance   = "https://discord.com/api/webhooks/845997446177882122/TeNhXYJ9Olt6O1ac9YeoaiKgnLpyZg52Dct3Qbz4Uwnv-3ebUpbl5knDVak2XIxE2QQt"
+Config.webhookvehicleshop = "https://discord.com/api/webhooks/845996996015816744/NKgFUQ_uDmYCfYT0jvvxMvN-oluI30sbGhD5K-3R_2Gp60PSVr3MZ2cnDd4bVWtdJbnT"
+Config.webhookpolice      = "https://discord.com/api/webhooks/845997548215861318/TV6EZlq1D9L8zrGWubVurcKheDJQtP1wg6MHPyM_OUL3KsGNujYNJwFaCU5sxTHyWtUI"
+Config.webhookweaponshop  = "https://discord.com/api/webhooks/845997647390441503/hqMEFVe5AOPuOLG6-kYCpiUuLbgJu3YUjOLqEHde0tB4V56quZlFU8nxsbWUt89EuBAj"
+Config.webhooklscustom    = "https://discord.com/api/webhooks/848307217915838464/IT4J6Gy_mJEvuihy-2jFfJJ8uT0wZHPSC6C0Dhyy6NumKDyfv_Geg5AkUARqaB1BTdrx"
+Config.webhookdrugs       = "https://discord.com/api/webhooks/845997746787975180/XgHGg6_mPmDMlLn_PA2S2OTKiX9s66CSEE9MwoiLriHdHmwmDob8HwTDxWQL6iD9Ozq5"
+Config.webhookradio       = "https://discord.com/api/webhooks/845997840358309939/9vEVCiXqoDFt7cc4OCyDFujPBBUOsDNk04zl5xlTjH7pjMMA53iw3kfaRdrYIyn69LzZ"
+Config.webhookspeedtest   = "https://discord.com/api/webhooks/845997949351886919/DSLibqkBbI3PNu3dwagluvSCAsObr531BR1hz-vYHlTsepIFBD0ffKbYWpQzXpDXNYCo"
+Config.webhookshop        = "https://discord.com/api/webhooks/845997049697927208/gMJ8Tasu4FoAOfziBKQgmPj1V5Ds_YGn35QiqHEaHfIdpPslMCEFi5cxX3Av2mJY-JtB"
+Config.webhookhunting     = "https://discord.com/api/webhooks/845998042796392489/UEJJr6CcRT6TecOpPvourBiwa2qZAbfu9vrtRMkcEYZLH_Olj4bVCrg-FYMDoFYvh0JJ"
+Config.webhookcrime       = "https://discord.com/api/webhooks/845997145353355284/bl7GjV2xEcp3gMuqvyro4dHQ7spSvSJ6eE1Q6ex3S5CzqWc8k_fV7wDuhaZRuHA2zVZB"
+Config.webhookbilling     = "https://discord.com/api/webhooks/845998225310875698/kami7-CJD8WiyJvUlP_O8xmmuEhakb5khFLKn9Hb2Uh5MF7aGMaunhdErHwepxVhf5IY"
+Config.webhooklogin       = "https://discord.com/api/webhooks/844037127495090198/4yyoChjlNwQxw5v7g2U6jPiQuJjLD52pjO2ojyO_SSffKWpYpn9BwIzsL_LlIwDg_bhy"
+Config.webhookfish        = "https://discord.com/api/webhooks/848281765176279090/i9VMYlrIu_nad3p-uS__fLE5fAEsT8CXn2MkY1ZEP9d17Xdhx9p7U8Hs--_DmegZaifx"
+Config.webhookwork        = "https://discord.com/api/webhooks/848851426654289930/pb-Ko6L3u6j9XFXVV1reTKj5RT8XL_qW6cGdQ3IsvogWbM_8A1ORqdQHGMSCJ1pZ2TbQ"
+Config.webhookcar         = "https://discord.com/api/webhooks/848944676454006824/teF5yp6b1KkYp4PcE3iFfgLy-muvKCSSKYC5q5HT8EANqYWRsIVi71gQ4LwRj6MAqmrn"
+Config.webhookhouse       = "https://discord.com/api/webhooks/851493522476630086/yPPxLzY6yiBrQpUzsTbjm4ObhSrtDlsEbuUZnB-lkEA3zyCtHbmSWMAxdOmCmwJw78RB"
+Config.webhookrent        = "https://discord.com/api/webhooks/852536801771651112/FaYB5lJgqbuRxt-mcv3XvkuAPuwYkqJiONnznlkBAktgLJ5dTrudQT1YUXoMR6PrmORT"
+
+-- TriggerEvent('esx_joblogs:AddInLog', "mechanic", "repair", xPlayer.name,cost)

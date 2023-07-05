@@ -1,0 +1,43 @@
+@import url("https://use.fontawesome.com/releases/v5.6.3/css/all.css");
+
+.main {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.main2 {
+  position: absolute;
+  bottom: 97%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.timepos {
+  position: absolute;
+  bottom: 97%;
+  transform: translate(-50%, 0%);
+}
+
+.top{
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 10%;
+  background-color: black;
+  left: 0%;
+}
+
+.bottom{
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  height: 10%;
+  background-color: black;
+  left: 0%;
+}		
+
+
+@keyframes soundwave {
+    0% { box-shadow: 0 0 0 0px rgba(255,255,255,0.75); }
+    100% { box-shadow: 0 0 0 25px rgba(255,255,255,0); }
+}

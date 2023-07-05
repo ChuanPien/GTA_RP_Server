@@ -1,0 +1,71 @@
+400;600;700&display=swap'); * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  margin: 80px auto;
+  max-width: 580px;
+}
+
+.accordion__item {
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+.accordion__header {
+  padding: 20px;
+  padding-right: 50px;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: white;
+  position: relative;
+  cursor: pointer;
+  background: var(--gray-dark);
+}
+
+.accordion__header::after {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: url("../../assets/img/white-arrow-transparent-png-22.png") no-repeat center;
+  background-size: contain;
+  transition: all .4s ease;
+}
+
+.accordion__body {
+  padding: 0 40px 20px 20px;
+  font-weight: 300;
+  /*font-size: 0.875rem;*/
+  color: #323232;
+  line-height: 1.5;
+  display: none;
+}
+
+.open-accordion .accordion__body {
+  display: block;
+}
+
+.open-accordion .accordion__header::after {
+  transform: rotate(-180deg);
+}
+
+.sort_lession_pointer {
+  cursor: n-resize;
+}
+
+.bg-tag {
+  background-color: #bf1010;
+  color: #fff;
+  /*border-right: 2px solid #ECECEC;*/
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+

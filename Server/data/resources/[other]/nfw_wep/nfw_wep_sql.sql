@@ -1,0 +1,11 @@
+INSERT INTO `items` (`name`, `label`,  `rare`, `can_remove`) VALUES ('yusuf', 'Skin de luxe', 0, 1);
+INSERT INTO `items` (`name`, `label`,  `rare`, `can_remove`) VALUES ('grip', 'Poignée',, 0, 1);
+INSERT INTO `items` (`name`, `label`,  `rare`, `can_remove`) VALUES ('flashlight', 'Lampe',  0, 1);
+INSERT INTO `items` (`name`, `label`,  `rare`, `can_remove`) VALUES ('silencieux', 'Silencieux',  0, 1);
+INSERT INTO `items` (`name`, `label`,  `rare`, `can_remove`) VALUES ('SmallArmor', 'Light Body Armor',  0, 1);
+INSERT INTO `items` (`name`, `label`,  `rare`, `can_remove`) VALUES ('MedArmor', 'Medium Body Armor',  0, 1);
+INSERT INTO `items` (`name`, `label`,  `rare`, `can_remove`) VALUES ('HeavyArmor', 'Heavy Body Armor',  0, 1);
+INSERT INTO `items` (`name`, `label`,  `rare`, `can_remove`) VALUES ('pAmmo', 'Pistol Ammo Box',  0, 1);
+INSERT INTO `items` (`name`, `label`,  `rare`, `can_remove`) VALUES ('mgAmmo', 'Maching Gun Ammo Box',  0, 1);
+INSERT INTO `items` (`name`, `label`,  `rare`, `can_remove`) VALUES ('arAmmo', 'Assault Rifle Ammo Box', 0, 1);
+INSERT INTO `items` (`name`, `label`,  `rare`, `can_remove`) VALUES ('sgAmmo', 'Shotgun Ammo Box',  0, 1);

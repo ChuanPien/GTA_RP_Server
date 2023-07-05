@@ -1,0 +1,163 @@
+<!-- 
+
+    Wraith Radar System - v1.02
+    Created by WolfKnight
+    
+-->
+
+<html>
+    <head>
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <script src="radar.js" type="text/javascript"></script>
+        <link href="radar.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body onselectstart="return false;" ondragstart="return false;">
+		<!-- Police Radar -->
+		<div id="policeradar" style="display: none;"> 
+			<div class="antennalabel antennalabeltop"></div>
+
+			<div class="logo"></div>
+
+			<div class="main">
+				<div class="container">
+					<div class="typecontainer">
+						<div class="text"><span class="fwdsame">前方</span></div>
+						<div class="text"><span class="fwdopp">左方</span></div>
+						<div class="text"><span class="fwdxmit"></span></div>
+					</div>
+
+					<div class="typecontainer">
+						<div class="text"><span class="bwdsame">後方</span></div>
+						<div class="text"><span class="bwdopp">左方</span></div>
+						<div class="text"><span class="bwdxmit"></span></div>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="patrolcontainer">
+						<div class="speedsourcecontainer target" data-target="fwdspeed">
+							<div class="speednumber text"></div>
+							<div class="speednumber text"></div>
+							<div class="speednumber text"></div>
+						</div>
+
+						<div class="label">前方車速</div>
+					</div>
+
+					<div class="patrolcontainer">
+						<div class="speedsourcecontainer target" data-target="bwdspeed">
+							<div class="speednumber text"></div>
+							<div class="speednumber text"></div>
+							<div class="speednumber text"></div>
+						</div>
+
+						<div class="label">後方車速</div>
+					</div>
+				</div>
+
+				<div class="container" style="width: 5px;">
+					<div class="arrowbox">
+						<i class="fa fa-arrow-up fwdarrowfront"></i>
+						<i class="fa fa-arrow-down fwdarrowback"></i>
+					</div>
+
+					<div class="arrowbox">
+						<i class="fa fa-arrow-up bwdarrowfront"></i>
+						<i class="fa fa-arrow-down bwdarrowback"></i>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="patrolcontainer" style="margin-top: 20px;">
+						<div class="speedfastcontainer target" data-target="fwdfast">
+							<div class="speednumber text"></div>
+							<div class="speednumber text"></div>
+							<div class="speednumber text"></div>
+						</div>
+
+						<div class="label">前方最高車速</div>
+					</div>
+
+					<div class="patrolcontainer" style="margin-bottom: 20px;">
+						<div class="speedfastcontainer target" data-target="bwdfast">
+							<div class="speednumber text"></div>
+							<div class="speednumber text"></div>
+							<div class="speednumber text"></div>
+						</div>
+
+						<div class="label">後方最高車速</div>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="patrolcontainer">
+						<div class="speedfastcontainer patrol" data-target="patrolspeed">
+							<div class="speednumber text"></div>
+							<div class="speednumber text"></div>
+							<div class="speednumber text"></div>
+						</div>
+
+						<div class="label">本車車速</div>
+					</div>
+				</div>		
+			</div>
+
+			<div class="antennalabel antennalabelbottom"></div>
+		<!-- License Plate Reader -->
+		<div id="platereader">
+			<div class="container">
+				<div id="fwdPlate" class="pReader fwdPlate"></div>
+				<div class="label">前方車牌</div>
+			</div>
+			<div class="container">
+				<div id="bwdPlate" class="pReader bwdPlate"></div>
+				<div class="label">後方車牌</div>
+			</div>
+		</div>
+		<!-- -==================- -->
+	</div>
+
+		<!-- Police Radar - Remote control --> 
+		<div id="policeradarrc" style="display: none;">
+			<div class="container">
+				<button class="toggle" data-action="radar_toggle">總開關</button>
+			</div>
+
+			<div class="label"></div>
+
+			<div class="container">
+				<button class="rowbutton frontopp" data-action="radar_frontopp">左前方</button>
+				<button class="rowbutton frontxmit" data-action="radar_frontxmit">開關</button>
+				<button class="rowbutton frontsame" data-action="radar_frontsame">正前方</button>
+			</div>
+
+			<div class="breakline"></div>
+
+			<div class="container">
+				<button class="rowbutton rearopp" data-action="radar_rearopp">左後方</button>
+				<button class="rowbutton rearxmit" data-action="radar_rearxmit">開關</button>
+				<button class="rowbutton rearsame" data-action="radar_rearsame">正後方</button>
+			</div>
+
+			<div class="label"></div>
+
+			<div class="container">
+				<button class="limit" data-action="radar_setlimit">設定最高限速</button>
+			</div>
+			<!-- 
+			<div class="container">
+				<button class="limit" data-action="radar_speedtype" style="margin-top: 0px;">TOGGLE SPEED TYPE</button>
+			</div> -->
+
+			<!-- <div class="container">
+				<button class="limit" data-action="radar_lockbeep" style="margin-top: 0px;">TOGGLE LOCK BEEP</button>
+			</div> -->
+
+			<div class="container">
+				<button class="close" data-action="close">關閉</button>
+			</div>
+		</div>
+    </body>
+</html>

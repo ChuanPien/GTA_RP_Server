@@ -1,0 +1,363 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min2.css">
+<link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+<link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+<link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+<link rel="stylesheet" href="assets/css/Accordion-with-custom-design.css">
+<link rel="stylesheet" href="assets/css/Toggle-Switch-1.css">
+<link rel="stylesheet" href="assets/css/Toggle-Switch.css">
+<style>
+#setting, #cinematic {display: none;}
+
+/* width */
+::-webkit-scrollbar {
+ width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+ background: rgb(33,37,41);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+ background: rgb(207, 207, 207);
+ margin-top: 2px; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+ background: rgb(23,23,23); 
+} 
+
+.myCheckBoxes {
+ display: none;
+}
+</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+
+<body>
+
+<!--  INFORMATION -->
+<div class="main2" id="main2">
+<div class="" style="top:0!important;width: auto;margin: 0px;height: 28px;color: rgb(255,255,255);">
+<div class="row" style="height: 25px;width: auto;">
+<div id="job" class="" style="border-radius: 4px;height: 25px;width: auto;max-width: auto;min-width: auto;background: var(--bs-dark);border-right: 1px solid rgba(255,255,255,0.07)">
+<i class="fa fa-suitcase"></i>
+<p class="job-text d-inline"></p>
+</div>
+<div id="id" style="margin-left: -10px; border-radius: 4px; height: 25px;width: auto;max-width: auto;min-width: auto;background: var(--bs-dark);border-right: 1px solid rgba(255,255,255,0.07);"><i class="fa fa-user"></i>
+<p id="idnumber" class="d-inline"></p>
+</div>
+<div id="bankdiv" style="margin-left: -10px; border-radius: 4px; height: 25px;width: auto;max-width: auto;min-width: auto;background: var(--bs-dark);border-right: 1px solid rgba(255,255,255,0.07);"><i class="fa fa-bank" style="color: var(--bs-red);"></i>
+<p id="bank" class="d-inline"></p>
+</div>
+<div id="walletdiv" style="margin-left: -10px; border-radius: 4px; height: 25px;width: auto;max-width: auto;min-width: auto;background: var(--bs-dark);border-right: 1px solid rgba(255,255,255,0.07);"><i class="fa fa-dollar" style="color: var(--bs-success);"></i>
+<p id="wallet" class="d-inline"></p>
+</div>
+<div id="blackMoneydiv" style="margin-left: -10px; border-radius: 4px; height: 25px;width: auto;max-width: auto;min-width: auto;background: var(--bs-dark);border-right: 1px solid rgba(255,255,255,0.07);"><i class="fa fa-user-secret" style="color: rgb(96,96,96);"></i>
+<p id="blackMoney" class="d-inline" style="height: auto;"></p>
+</div>
+<div id="timediv" class="time" style="margin-left: -10px; border-radius: 4px; height: 25px;width: auto;max-width: auto;min-width: auto;background: var(--bs-dark);border-right: 1px solid rgba(255,255,255,0.07);"><i class="fas fa-clock"></i>
+<p id="time" class="d-inline" style="height: auto;"></p>
+</div>
+<!-- invblock is a fix, do not delete it. -->
+<div id="invblock" class="invblock" style="margin-left: -10px; "></i> 
+<p class="d-inline" style="height: auto;"></p>
+</div>
+</div>
+</div>
+</div>
+<!--  STATUS -->
+<div class="main"id="main">
+<div id="healthdiv" class="container bg-dark d-inline-flex" style="bottom:0;width: 130px;box-shadow: 0px 0px 6px;height: 24px;border-top-left-radius: 4px;border-top-right-radius: 4px;border-bottom-right-radius: 4px;border-bottom-left-radius: 4px;margin-bottom: 0px;">
+<div class="row" style="width: 175px;padding-top: 3px;">
+<div class="col" style="width: 20px;min-width: 20px;max-width: 20px;height: 20px;background: var(--bs-dark);margin-right: 0px;margin-left: 2px;"><i class="fas fa-heart d-inline float-start" style="color: var(--bs-light);margin-left: -8px;margin-bottom: 0px;margin-top: 1px;"></i></div>
+<div class="col" style="height: 20px;padding-right: 0px;padding-left: 0px;box-shadow: 0px 0px;max-width: 350px;">
+<div class="progress border rounded border-dark shadow-sm" style="width: 102px;margin-top: -1px;height: 20px;border-bottom-left-radius: 0px;border-bottom-right-radius: 4px;border-width: 1px;border-style: solid;border-top-right-radius: 4px;background: rgba(233,236,239,0.57);">
+<div class="progress-bar bg-success" id="health" ></div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="armordiv" class="container bg-dark d-inline-flex" style="bottom:0;width: 130px;box-shadow: 0px 0px 6px;height: 24px;border-top-left-radius: 4px;border-top-right-radius: 4px;border-bottom-right-radius: 4px;border-bottom-left-radius: 4px;margin-bottom: 0px;">
+<div class="row" style="width: 175px;padding-top: 3px;">
+<div class="col" style="width: 20px;min-width: 20px;max-width: 20px;height: 20px;background: var(--bs-dark);margin-right: 0px;margin-left: 2px;"><i class="fas fa-shield-alt d-inline float-start" style="color: var(--bs-light);margin-left: -8px;margin-bottom: 0px;margin-top: 1px;"></i></div>
+<div class="col" style="height: 20px;padding-right: 0px;padding-left: 0px;box-shadow: 0px 0px;max-width: 350px;">
+<div class="progress border rounded border-dark shadow-sm" style="width: 102px;margin-top: -1px;height: 20px;border-bottom-left-radius: 0px;border-bottom-right-radius: 4px;border-width: 1px;border-style: solid;border-top-right-radius: 4px;background: rgba(233,236,239,0.57);">
+<div class="progress-bar bg-primary" id="armor" ></div>
+</div>
+</div>
+</div>
+</div>
+<div id="hungerdiv" class="container bg-dark d-inline-flex" style="bottom:0;width: 130px;box-shadow: 0px 0px 6px;height: 24px;border-top-left-radius: 4px;border-top-right-radius: 4px;border-bottom-right-radius: 4px;border-bottom-left-radius: 4px;">
+<div class="row" style="width: 175px;padding-top: 3px;">
+<div class="col" style="width: 20px;min-width: 20px;max-width: 20px;height: 20px;background: var(--bs-dark);margin-right: 0px;margin-left: 2px;"><i class="fas fa-utensils d-inline float-start" style="color: var(--bs-light);margin-left: -8px;margin-bottom: 0px;margin-top: 1px;"></i></div>
+<div class="col" style="height: 20px;padding-right: 0px;padding-left: 0px;box-shadow: 0px 0px;max-width: 350px;">
+<div class="progress border rounded border-dark shadow-sm" style="width: 102px;margin-top: -1px;height: 20px;border-bottom-left-radius: 0px;border-bottom-right-radius: 4px;border-width: 1px;border-style: solid;border-top-right-radius: 4px;background: rgba(233,236,239,0.57);">
+<div class="progress-bar bg-danger" id="hunger" ></div>
+</div>
+</div>
+</div>
+</div>
+<div id="thirstdiv" class="container bg-dark d-inline-flex" style="width: 130px;box-shadow: 0px 0px 6px;height: 24px;border-top-left-radius: 4px;border-top-right-radius: 4px;border-bottom-right-radius: 4px;border-bottom-left-radius: 4px;">
+<div class="row" style="width: 175px;padding-top: 3px;">
+<div class="col" style="width: 20px;min-width: 20px;max-width: 20px;height: 20px;background: var(--bs-dark);margin-right: 0px;margin-left: 2px;">
+<i class="fas fa-tint d-inline float-start" style="color: var(--bs-light);margin-left: -8px;margin-bottom: 0px;margin-top: 1px;"></i></div>
+<div class="col" style="height: 20px;padding-right: 0px;padding-left: 0px;box-shadow: 0px 0px;max-width: 350px;">
+<div class="progress border rounded border-dark shadow-sm" style="width: 102px;margin-top: -1px;height: 20px;border-bottom-left-radius: 0px;border-bottom-right-radius: 4px;border-width: 1px;border-style: solid;border-top-right-radius: 4px;background: rgba(233,236,239,0.57);">
+<div class="progress-bar bg-info" id="thirst" ></div>
+</div>
+</div>
+</div>
+</div>
+<div id="staminadiv" class="container bg-dark d-inline-flex" style="width: 130px;box-shadow: 0px 0px 6px;height: 24px;border-top-left-radius: 4px;border-top-right-radius: 4px;border-bottom-right-radius: 4px;border-bottom-left-radius: 4px;">
+<div class="row" style="width: 175px;padding-top: 3px;">
+<div class="col" style="width: 20px;min-width: 20px;max-width: 20px;height: 20px;background: var(--bs-dark);margin-right: 0px;margin-left: 2px;">
+<i class="fas fa-running d-inline float-start" style="color: var(--bs-light);margin-left: -8px;margin-bottom: 0px;margin-top: 1px;"></i></div>
+<div class="col" style="height: 20px;padding-right: 0px;padding-left: 0px;box-shadow: 0px 0px;max-width: 350px;">
+<div class="progress border rounded border-dark shadow-sm" style="width: 102px;margin-top: -1px;height: 20px;border-bottom-left-radius: 0px;border-bottom-right-radius: 4px;border-width: 1px;border-style: solid;border-top-right-radius: 4px;background: rgba(233,236,239,0.57);">
+<div class="progress-bar bg-warning" id="stamina" ></div>
+</div>
+</div>
+</div>
+</div>
+<div id="oxygendiv" class="container bg-dark d-inline-flex" style="width: 130px;box-shadow: 0px 0px 6px;height: 24px;border-top-left-radius: 4px;border-top-right-radius: 4px;border-bottom-right-radius: 4px;border-bottom-left-radius: 4px;">
+<div class="row" style="width: 175px;padding-top: 3px;">
+<div class="col" style="width: 20px;min-width: 20px;max-width: 20px;height: 20px;background: var(--bs-dark);margin-right: 0px;margin-left: 2px;">
+<i class="fas fa-brain d-inline float-start" style="color: var(--bs-light);margin-left: -8px;margin-bottom: 0px;margin-top: 1px;"></i></div>
+<div class="col" style="height: 20px;padding-right: 0px;padding-left: 0px;box-shadow: 0px 0px;max-width: 350px;">
+<div class="progress border rounded border-dark shadow-sm" style="width: 102px;margin-top: -1px;height: 20px;border-bottom-left-radius: 0px;border-bottom-right-radius: 4px;border-width: 1px;border-style: solid;border-top-right-radius: 4px;background: rgba(233,236,239,0.57);">
+<div class="progress-bar bg-light" id="oxygen"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="cinematic">
+<div class="top" id="top"></div>
+<div class="bottom" id="bottom"></div>
+</div>
+<!--  SETTINGS -->
+<div id="setting" class="border rounded accordion mb-2" style="left: 40%; top: 10%;position: absolute;">
+<div class="card" style="resize: vertical;width: 487px;height: auto; max-height: 778px; min-height: 320px;">
+<div class="card-header" style="background: rgb(23,23,23);color: rgb(255,255,255);width: 487px;">
+<h5 class="d-inline-flex mb-0" style="width: 157px;font-size: 21px;">HUD設定</h5>
+<button id="reset-position" class="btn btn-success btn-sm" type="submit" style="margin-top: -9px;margin-left: 126px;padding-bottom: 0px;padding-top: 0px;">重設位置</button>
+<button id="close" class="btn btn-danger btn-sm float-end" type="submit" style="padding-bottom: 0px;padding-top: 0px;margin-top: 1px;margin-right: -8px;"><strong>X</strong></button>
+</div>
+<div class="card-body" style="overflow:auto;height: auto;background: var(--bs-dark);color: var(--bs-light);padding-bottom: 10px;width: 487px;">
+<div role="alert" class="alert alert-dark" style="height: 29px;padding: 0px;text-align: center;margin-bottom: 10px;color: rgb(164,164,164);background: rgb(38,38,38);border-color: rgb(72,72,72);"><i class="fa fa-info-circle" style="margin-right: 3px;"></i><span>設定將會自動儲存<br /></span></div>
+<div class="row">
+<div class="col" style="width: 600px;">
+<h5 style="color: rgba(255,255,255,0.63);">狀況</h5>
+</div>
+</div>
+<div class="row" style="height: 30px;border-bottom: 1px solid rgba(248,249,250,0.16);">
+<div class="col-xl-1" style="width: 45px;margin-top: 2px;text-align: center;"><i class="fas fa-heart" style="margin-top: 4px; color: var(--bs-success);"></i></div>
+<div class="col-xl-3 offset-xl-0" style="height: 30px;width: 120px;margin-top: 2px;">
+<p class="d-inline-flex" style="font-size: 14px;margin-top: 2px;"><strong>血量</strong></p>
+</div>
+<div class="col-xl-7 offset-xl-0" style="width: 225px;min-width: auto;max-width: auto;height: 30px;text-align: left;margin-top: -2px;"><small class="form-text" style="margin-top: 4px;">顯示/隱藏</small></div>
+<div class="col-xl-5 d-inline-flex" style="width: auto;min-width: auto;max-width: auto;height: 30px;">
+<label class="switch">
+<input type="checkbox" id="health-switch" checked="true">
+<span class="slider round"></span>
+</label></div>
+</div>
+<div class="row" style="height: 30px;border-bottom: 1px solid rgba(248,249,250,0.16);">
+<div class="col-xl-1" style="width: 45px;margin-top: 2px;text-align: center;"><i class="fas fa-shield-alt" style="margin-top: 4px; color: var(--bs-blue);"></i></div>
+<div class="col-xl-3 offset-xl-0" style="height: 30px;width: 120px;margin-top: 2px;">
+<p class="d-inline-flex" style="font-size: 14px;margin-top: 2px;"><strong>護甲</strong></p>
+</div>
+<div class="col-xl-7 offset-xl-0" style="width: 225px;min-width: auto;max-width: auto;height: 30px;text-align: left;margin-top: -2px;"><small class="form-text">顯示/隱藏</small></div>
+<div class="col-xl-5 d-inline-flex" style="width: auto;min-width: auto;max-width: auto;height: 30px;">
+<label class="switch">
+<input type="checkbox" id="armor-switch" checked="true">
+<span class="slider round"></span>
+</label></div>
+</div>
+<div class="row" style="height: 30px;border-bottom: 1px solid rgba(248,249,250,0.16);">
+<div class="col-xl-1" style="width: 45px;margin-top: 2px;text-align: center;"><i class="fas fa-utensils" style="margin-top: 4px; color: var(--bs-red);"></i></div>
+<div class="col-xl-3 offset-xl-0" style="height: 30px;width: 120px;margin-top: 2px;">
+<p class="d-inline-flex" style="font-size: 14px;margin-top: 2px;"><strong>飢餓值</strong></p>
+</div>
+<div class="col-xl-7 offset-xl-0" style="width: 225px;min-width: auto;max-width: auto;height: 30px;text-align: left;margin-top: -2px;"><small class="form-text">顯示/隱藏</small></div>
+<div class="col-xl-5 d-inline-flex" style="width: auto;min-width: auto;max-width: auto;height: 30px;">
+<label class="switch">
+<input type="checkbox" id="hunger-switch" checked="true">
+<span class="slider round"></span>
+</label></div>
+</div>
+<div class="row" style="height: 30px;border-bottom: 1px solid rgba(248,249,250,0.16);">
+<div class="col-xl-1" style="width: 45px;margin-top: 2px;text-align: center;"><i class="fas fa-tint" style="margin-top: 4px; color: var(--bs-info);"></i></div>
+<div class="col-xl-3 offset-xl-0" style="height: 30px;width: 120px;margin-top: 2px;">
+<p class="d-inline-flex" style="font-size: 14px;margin-top: 2px;"><strong>口渴值</strong></p>
+</div>
+<div class="col-xl-7 offset-xl-0" style="width: 225px;min-width: auto;max-width: auto;height: 30px;text-align: left;margin-top: -2px;"><small class="form-text">顯示/隱藏</small></div>
+<div class="col-xl-5 d-inline-flex" style="width: auto;min-width: auto;max-width: auto;height: 30px;">
+<label class="switch">
+<input type="checkbox" id="thirst-switch" checked="true">
+<span class="slider round"></span>
+</label></div>
+</div>
+<div class="row" style="height: 30px;border-bottom: 1px solid rgba(248,249,250,0.16);">
+<div class="col-xl-1" style="width: 45px;margin-top: 2px;text-align: center;"><i class="fas fa-running" style="margin-top: 4px; color: var(--bs-yellow);"></i></div>
+<div class="col-xl-3 offset-xl-0" style="height: 30px;width: 120px;margin-top: 2px;">
+<p class="d-inline-flex" style="font-size: 14px;margin-top: 2px;"><strong>體力值</strong></p>
+</div>
+<div class="col-xl-7 offset-xl-0" style="width: 225px;min-width: auto;max-width: auto;height: 30px;text-align: left;margin-top: -2px;"><small class="form-text">顯示/隱藏</small></div>
+<div class="col-xl-5 d-inline-flex" style="width: auto;min-width: auto;max-width: auto;height: 30px;">
+<label class="switch">
+<input type="checkbox" id="stamina-switch" checked="true">
+<span class="slider round"></span>
+</label></div>
+</div>
+<div class="row" style="height: 30px;">
+<div class="col-xl-1" style="width: 45px;margin-top: 2px;text-align: center;"><i style="margin-top: 4px;" class="fas fa-brain"></i></div>
+<div class="col-xl-3 offset-xl-0" style="height: 30px;width: 120px;margin-top: 2px;">
+<p class="d-inline-flex" style="font-size: 14px;margin-top: 2px;"><strong>氧氣</strong></p>
+</div>
+<div class="col-xl-7 offset-xl-0" style="width: 225px;min-width: auto;max-width: auto;height: 30px;text-align: left;margin-top: -2px;"><small class="form-text">顯示/隱藏</small></div>
+<div class="col-xl-5 d-inline-flex" style="width: auto;min-width: auto;max-width: auto;height: 30px;">
+<label class="switch">
+<input type="checkbox" id="oxygen-switch" checked="true">
+<span class="slider round"></span>
+</label></div>
+</div>
+<div class="row">
+<div class="col" style="width: 600px;">
+<h5 style="color: rgba(255,255,255,0.63);margin-top: 10px;">資訊</h5>
+</div>
+</div>
+<div class="row" style="height: 30px;border-bottom: 1px solid rgba(248,249,250,0.16);">
+<div class="col-xl-1" style="width: 45px;margin-top: 2px;text-align: center;"><i class="fa fa-bank" style="margin-top: 4px; color: var(--bs-red);"></i></div>
+<div class="col-xl-3 offset-xl-0" style="height: 30px;width: 120px;margin-top: 2px;">
+<p class="d-inline-flex" style="font-size: 14px;margin-top: 2px;"><strong>銀行</strong></p>
+</div>
+<div class="col-xl-7 offset-xl-0" style="width: 225px;min-width: auto;max-width: auto;height: 30px;text-align: left;margin-top: -2px;"><small class="form-text" style="margin-top: 4px;">顯示/隱藏</small></div>
+<div class="col-xl-5 d-inline-flex" style="width: auto;min-width: auto;max-width: auto;height: 30px;">
+<label class="switch">
+<input type="checkbox" id="bankdiv-switch" checked="true">
+<span class="slider round"></span>
+</label></div>
+</div>
+<div class="row" style="height: 30px;border-bottom: 1px solid rgba(248,249,250,0.16);">
+<div class="col-xl-1" style="width: 45px;margin-top: 2px;text-align: center;"><i class="fas fa-dollar-sign" style="margin-top: 4px; color: var(--bs-success);"></i></div>
+<div class="col-xl-3 offset-xl-0" style="height: 30px;width: 120px;margin-top: 2px;">
+<p class="d-inline-flex" style="font-size: 14px;margin-top: 2px;"><strong>現金</strong></p>
+</div>
+<div class="col-xl-7 offset-xl-0" style="width: 225px;min-width: auto;max-width: auto;height: 30px;text-align: left;margin-top: -2px;"><small class="form-text" style="margin-top: 4px;">顯示/隱藏</small></div>
+<div class="col-xl-5 d-inline-flex" style="width: auto;min-width: auto;max-width: auto;height: 30px;">
+<label class="switch">
+<input type="checkbox" id="walletdiv-switch" checked="true">
+<span class="slider round"></span>
+</label></div>
+</div>
+<div class="row" style="height: 30px;border-bottom: 1px solid rgba(248,249,250,0.16);">
+<div class="col-xl-1" style="width: 45px;margin-top: 2px;text-align: center;"><i class="fa fa-user-secret" style="margin-top: 4px; color: var(--bs-secondary);"></i></div>
+<div class="col-xl-3 offset-xl-0" style="height: 30px;width: 120px;margin-top: 2px;">
+<p class="d-inline-flex" style="font-size: 14px;margin-top: 2px;"><strong>黑錢</strong></p>
+</div>
+<div class="col-xl-7 offset-xl-0" style="width: 225px;min-width: auto;max-width: auto;height: 30px;text-align: left;margin-top: -2px;"><small class="form-text" style="margin-top: 4px;">顯示/隱藏</small></div>
+<div class="col-xl-5 d-inline-flex" style="width: auto;min-width: auto;max-width: auto;height: 30px;">
+<label class="switch">
+<input type="checkbox" id="blackMoneydiv-switch" checked="true">
+<span class="slider round"></span>
+</label></div>
+</div>
+<div class="row" style="height: 30px;border-bottom: 1px solid rgba(248,249,250,0.16);">
+<div class="col-xl-1" style="width: 45px;margin-top: 2px;text-align: center;"><i style="margin-top: 4px;" class="fas fa-user"></i></div>
+<div class="col-xl-3 offset-xl-0" style="height: 30px;width: 120px;margin-top: 2px;">
+<p class="d-inline-flex" style="font-size: 14px;margin-top: 2px;"><strong>玩家ID</strong></p>
+</div>
+<div class="col-xl-7 offset-xl-0" style="width: 225px;min-width: auto;max-width: auto;height: 30px;text-align: left;margin-top: -2px;"><small class="form-text" style="margin-top: 4px;">顯示/隱藏</small></div>
+<div class="col-xl-5 d-inline-flex" style="width: auto;min-width: auto;max-width: auto;height: 30px;">
+<label class="switch">
+<input type="checkbox" id="id-switch" checked="true">
+<span class="slider round"></span>
+</label></div>
+</div>
+<div class="row" style="height: 30px;border-bottom: 1px solid rgba(248,249,250,0.16);">
+<div class="col-xl-1" style="width: 45px;margin-top: 2px;text-align: center;"><i style="margin-top: 4px;" class="far fa-clock"></i></div>
+<div class="col-xl-3 offset-xl-0" style="height: 30px;width: 120px;margin-top: 2px;">
+<p class="d-inline-flex" style="font-size: 14px;margin-top: 2px;"><strong>時間</strong></p>
+</div>
+<div class="col-xl-7 offset-xl-0" style="width: 225px;min-width: auto;max-width: auto;height: 30px;text-align: left;margin-top: -2px;"><small class="form-text" style="margin-top: 4px;">顯示/隱藏</small></div>
+<div class="col-xl-5 d-inline-flex" style="width: auto;min-width: auto;max-width: auto;height: 30px;">
+<label class="switch">
+<input type="checkbox" id="time-switch" checked="true">
+<span class="slider round"></span>
+</label></div>
+</div>
+
+<div class="row" style="height: 30px;border-bottom: 0px solid rgba(248,249,250,0.16) ;">
+<div class="col-xl-1" style="width: 45px;margin-top: 2px;text-align: center;"><i style="margin-top: 4px;" class="fas fa-suitcase"></i></div>
+<div class="col-xl-3 offset-xl-0" style="height: 30px;width: 120px;margin-top: 2px;">
+<p class="d-inline-flex" style="font-size: 14px;margin-top: 2px;"><strong>工作</strong></p>
+</div>
+<div class="col-xl-7 offset-xl-0" style="width: 225px;min-width: auto;max-width: auto;height: 30px;text-align: left;margin-top: -2px;"><small class="form-text" style="margin-top: 4px;">顯示/隱藏</small></div>
+<div class="col-xl-5 d-inline-flex" style="width: auto;min-width: auto;max-width: auto;height: 30px;">
+<label class="switch">
+<input type="checkbox" id="job-switch" checked="true">
+<span class="slider round"></span>
+</label></div>
+</div>
+<div class="row" style="height: 30px;border-bottom-color: rgba(248,249,250,0.16);margin-top: 12px;background: rgba(255,255,255,0.15);border-radius: 4px;">
+<div class="col-xl-1 offset-xl-1" style="width: 45px;margin-top: 0px;border-top-left-radius: 4px;border-bottom-left-radius: 4px;border-bottom-color: var(--bs-gray-dark);margin-left: 49.2px;"><i class="fas fa-tv" style="padding-top: 8px;"></i></div>
+<div class="col-xl-3 offset-xl-0" style="width: auto;margin-top: 0px;height: 30px;">
+<p class="d-inline-flex" style="font-size: 14px;margin-top: 5px;"><strong>顯示/隱藏所有資訊</strong></p>
+</div>
+<div class="col-xl-5 d-inline-flex" style="width: auto;min-width: auto;max-width: auto;height: 30px;padding-top: 0px;margin-top: 0px;padding-bottom: 0px;border-top-right-radius: 4px;border-bottom-color: var(--bs-gray-dark);border-bottom-right-radius: 4px;">
+<label class="switch" name="mainswitchlabel">
+<input type="checkbox" id="main-switch" name="main">
+<span class="slider round"></span>
+</label></label></div>
+</div>
+<h5 style="color: rgba(255,255,255,0.63);margin-top: 10px;">其他</h5>
+<div class="row" style="height: 30px;border-bottom: 1px solid rgba(248,249,250,0.16);">
+<div class="col-xl-1" style="width: 45px;margin-top: 2px;text-align: center;"><i style="margin-top: 4px;" class="fa fa-video-camera" style="border-bottom-color: rgb(220, 53, 69);"></i></div>
+<div class="col-xl-3 offset-xl-0" style="height: 30px;width: 120px;margin-top: 2px;">
+<p class="d-inline-flex" style="font-size: 14px;margin-top: 2px;"><strong>電影黑框</strong></p>
+</div>
+<div class="col-xl-7 offset-xl-0" style="width: 225px;min-width: auto;max-width: auto;height: 30px;text-align: left;margin-top: -2px;"><small class="form-text" style="margin-top: 6px;">顯示/隱藏</small></div>
+<div class="col-xl-5 d-inline-flex" style="width: auto;min-width: auto;max-width: auto;height: 30px;">
+<label class="switch">
+<input type="checkbox" id="cinematic-switch">
+<span class="slider round"></span>
+</label></div>
+</div>
+<div class="row" style="height: 30px;border-bottom: 0px solid rgba(248,249,250,0.16) ;">
+<div class="col-xl-1" style="width: 45px;margin-top: 2px;text-align: center;"><i style="margin-top: 4px;" class="fas fa-map"></i></div>
+<div class="col-xl-3 offset-xl-0" style="height: 30px;width: 120px;margin-top: 2px;">
+<p class="d-inline-flex" style="font-size: 14px; margin-top: 2px;" ><strong>地圖</strong></p>
+</div>
+<div class="col-xl-7 offset-xl-0" style="width: 225px;min-width: auto;max-width: auto;height: 30px;text-align: left;margin-top: -2px;"><small class="form-text" style="margin-top: 6px;">顯示/隱藏</small></div>
+<div class="col-xl-5 d-inline-flex" style="width: auto;min-width: auto;max-width: auto;height: 30px;">
+<label class="switch">
+<input type="checkbox" id="map-switch" checked="true">
+<span class="slider round"></span>
+</label></div>
+</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="./js/script.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/Accordion-with-custom-design.js"></script>
+</body>
+</html>

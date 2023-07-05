@@ -1,0 +1,187 @@
+<html>
+
+<head>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+		integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="chart.min.js" type="text/javascript"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+	<script>
+		$(function () {
+			/* open the UI for user */
+			window.addEventListener('message', function (event) {
+				if (event.data.type == "open") {
+					$('.pomoc').css('display', 'block')
+					$('body').css('display', 'block')
+					$('html').css('display', 'block')
+				} else if (event.data.type == "close") {
+					$('.pomoc').css('display', 'none')
+					$('body').css('display', 'none')
+					$('html').css('display', 'none')
+				}
+			});
+		});	
+	</script>
+</head>
+
+<body>
+	<div class="pomoc">
+		<div class="container main">
+			<div class="row">
+				<ul class="menu">
+					<li data-id="page-main">
+						<span>🏰懶欣鎮</span>
+					</li>
+					<li data-id="page2">
+						<span>📜懶欣條款</span>
+					</li>
+					<li data-id="page3">
+						<span>⌨按鍵教學</span>
+					</li>
+					<li data-id="page4">
+						<span>🏠房產資訊</span>
+					</li>
+				</ul>
+
+				<div id="close-help" class="btn btn-danger" style="display: inline-block;">
+					<span>X</span>
+				</div>
+			</div>
+			<div class=" page page-main">
+				<div class="row">
+					<div class="col-12 col-lg-6">
+						<H1>懶欣鎮|RP|TS3</H1>
+						<p>歡迎光臨懶欣鎮</p>
+						<br/>
+						<h2>資訊</h2>
+						<p>IP: <b></b>220.135.215.124</b></p>
+						<p>TS3: <b>220.135.215.124</b></p>
+						<p>Discord: <b>https://discord.gg/GX2AxREJwA</b></p>
+					</div>
+					<div class="col-12 col-lg-6"><img src="img/logo.png"/></div>
+				</div>
+			</div>
+			<div class=" page page2" style="display:none;">
+				<div class="row">
+					<div class="col-12  col-lg-6">
+						<h3>🔅日常法條：</h3>
+						🔸請以全RP的方式進行互動<br />
+						🔸不可無理由殺人及超人行為<br />
+						🔸劇情過程中請盡量不要跳/停RP，如果發生糾紛請嘗試玩家自己解決，不要動不動就找市長，知道對方是屁孩，自己就先退一步，或直接幹回去。找市長是最爛的結局<br />
+						🔸遊戲內的問題、情報，請在遊戲內想辦法取得，手機Twitter很好用<br />
+						🔸起床後請融入劇情，不要做不該做的事情<br />
+						🔸重傷當下沒醫護上班請自重，嚴禁DC呼叫醫護起床(遊戲內手機可)<br />
+						🔸某些物品不會有重量，但會限制虛擬最大數，請遵守<br />
+						🔸商店買的子彈不要全部使用，睡覺後槍上的會消失<br />
+						🔸聊天室請勿打字<br />
+						🔸不要在遊戲外問遊戲內的問題<br />
+						🔸市民飛行類載具只能停在停機坪<br />
+						🔸同車牌不可出現兩台車，若出現直接銷毀<br />
+						🔸改裝項目公務局不負責賠償<br />
+					</div>
+					<div class="col-12  col-lg-5">
+						<h3>🚨犯罪法條 :</h3>
+						🔸警局(包含門口停車區)及醫護局(大馬路內)禁止犯罪<br />
+						🔸搶方人數包含接應人數為警方人數 - 1<br />
+						🔸追逐中不可回車庫更換載具<br />
+						🔸搶劫超商/珠寶/銀行，皆須等警方到現場，若搶方直接離開判輸<br />
+						🔸不可直接開車撞人，雙方皆是<br />
+						🔸無警察上班時禁止所有犯罪(若犯罪請確認對方能接受，不要到時候有人來找我靠北)<br />
+						🔸當已被威脅請勿超人掏武器反擊(在載具上可離開)<br />
+						🔸倒地後請遵守醫護指示<br />
+						🔸只要倒地就判該市民已被逮<br />
+						🔸嫌犯不可威脅醫護先救己方<br />
+						🔸嚴禁守屍/鞭屍<br />
+						🔸若車輛未懸掛車牌，警方可依法攔查開單<br />
+						🔸車輛類別為 [ 機車/超級跑車/電動車 ] 請勿犯罪<br />
+						🔸警方如有通緝市民，需公告。若無公告，警方不可隨意盤查，民眾也無需配合<br />
+						🔸搶案發生警方到場後，搶案時間將由警方控制(若歹徒時間不多，可提示警方，雙方配合)。若歹徒在雙方還沒談完就出來，警方可直接擊斃歹徒<br />
+						🔸若一次觸發兩個案件，👮局長(現場最高指揮官)有權選擇是否強制停止後觸發案件<br />
+						🔸談判內容請互相。歹徒搶劫前通常會去想一些厲害的逃跑路線(動腦)警方可用談判內容去大概了解歹徒的逃跑方法，提前做出一套破解的方法(動腦)。而不是用強硬的手段去強制阻止歹徒的逃跑路線(沒動腦)<br />
+					</div>
+				</div>
+			</div>
+			<div class=" page3 page" style="display:none;">
+				<div class="row">
+				</div>
+				<div class="row">
+					<div class="col-12 col-lg-6">
+						<h4><span class="btn btn-warning btn-sm mb-1 mb-1">F1</span> - 手機</br>
+							<span class="btn btn-warning btn-sm mb-1 mb-1">F2</span> - 背包</br>
+							<span class="btn btn-warning btn-sm mb-1 mb-1">F3</span> - 動作</br>
+							<span class="btn btn-warning btn-sm mb-1 mb-1">F5</span> - 快捷/載具選單</br>
+							<span class="btn btn-warning btn-sm mb-1 mb-1">F6</span> - 公職選單</br>
+							<span class="btn btn-warning btn-sm mb-1 mb-1">F9</span> - 公職資訊</br>
+							<span class="btn btn-warning btn-sm mb-1 mb-1">Space</span> - 進城音樂暫停</br>
+							<span class="btn btn-warning btn-sm mb-1 mb-1">CAP</span> - 無線電</br>
+						</h4>
+					</div>
+					<div class="col-12  col-lg-6">
+						<h4><span class="btn btn-warning btn-sm mb-1 mb-1">L</span> - 衣服</br>
+							<span class="btn btn-warning btn-sm mb-1 mb-1">X</span> - 投降</br>
+							<span class="btn btn-warning btn-sm mb-1 mb-1">～</span> - 語音距離</br>
+							<span class="btn btn-warning btn-sm mb-1 mb-1">G</span> - 看對方背包(自己持武器,對方投降)</br>
+							<span class="btn btn-warning btn-sm mb-1 mb-1">Ctrl</span> - 蹲</br>
+
+							<span class="btn btn-warning btn-sm mb-1 mb-1">U</span> - 鎖車</br>
+							<span class="btn btn-warning btn-sm mb-1 mb-1">K</span> - 安全帶/裝死</br>
+							<span class="btn btn-warning btn-sm mb-1 mb-1">2</span> - 限速</br>
+							<span class="btn btn-warning btn-sm mb-1 mb-1">⬇</span> - 雙黃燈</br>
+							<span class="btn btn-warning btn-sm mb-1 mb-1">↔</span> - 方向燈</br>
+						</h4>
+					</div>
+					<div class="col-12 col-lg-0">
+						<h4>🔸若手機無法傳送GPS，請在該簡訊聊天室打 %pos%</br>
+							🔸卡背包----------------------F8 closeinv</br>
+							🔸卡手機----------------------F8 phone</br>
+							🔸頭上字----------------------/me</br>
+						</h4>
+					</div>
+				</div>
+			</div>
+			<div class=" page4 page" style="display:none;">
+				<div class="row">
+				</div>
+				<div class="row">
+					<div class="col-12  col-lg-6">
+						<h3>🏠房產資訊</h3>
+						<h5>🔸已購房產請勿重複購買<br />
+							🔸購屋後請 /gg 刷新房產車庫<br />
+							🔸請以正確的方式離開房產<br />
+							🔸若以不正確的方式離開，請重新登入<br />
+						</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+	$(".pulpit li span").click(function () {
+		$('.main.container > *').hide();
+		$('.' + $(this).data('id')).show();
+
+	});
+	$(".close-dialog").click(function () {
+		$('.dialog').hide();
+	});
+	$("#close-help").click(function () {
+		$('.page').hide();
+		$('.page-main').show();
+		$.post('http://rgz_help/NUIFocusOff', JSON.stringify({}));
+	});
+	$(".menu li").click(function () {
+		$('.container .page').hide();
+		$('.container .page.' + $(this).data('id')).show();
+	});
+	document.onkeyup = function (data) {
+		if (data.which == 27) { // Escape key
+			$('.pomoc').css('display', 'none')
+			$.post('http://rgz_help/NUIFocusOff', JSON.stringify({}));
+		}
+	};
+</script>
+
+</html>
