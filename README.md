@@ -18,3 +18,6 @@
   + LUA
   + HeidiSQL
   + XAMPP
+
+
+註* 檔案80%下載/95%修改過
